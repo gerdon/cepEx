@@ -6,25 +6,38 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-item>
-    <ion-label>Cep</ion-label>
-    <ion-input type="text" name="cep" [(ngModel)]="cep"></ion-input>
-  </ion-item>
+<ion-content class="ion-padding">
+    <ion-item>
+      <ion-label position="floating">Cep</ion-label>
+      <ion-input 
+        type="text" 
+        name="cep" 
+        [(ngModel)]="cep">
+      </ion-input>
+    </ion-item>
+  
+    <ion-button expand="block" (click)="getCep()">
+      <ion-icon slot="end" name="search"></ion-icon>
+      Pesquisar
+    </ion-button>
 
-  <button ion-button color="primary" (click)="getCep()">Cep</button>
-
-  <ion-item>
-    <div>
-      <p>Cep: {{ endereco.cep }}</p>
-      <p>Bairro: {{ endereco.bairro }}</p>
-      <p>Complemento: {{ endereco.complemento }}</p>
-      <p>Gia: {{ endereco.gia }}</p>
-      <p>Ibge: {{ endereco.ibge }}</p>
-      <p>Localidade: {{ endereco.localidade }}</p>
-      <p>Logradouro: {{ endereco.logradouro }}</p>
-      <p>UF: {{ endereco.uf }}</p>
-      <p>Unidade: {{ endereco.unidade }}</p>
-    </div>
-  </ion-item>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Cep</ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <div>
+          <p>Cep: {{ endereco.cep }}</p>
+          <p>Bairro: {{ endereco.bairro }}</p>
+          <p>Complemento: {{ endereco.complemento }}</p>
+          <p>Gia: {{ endereco.gia }}</p>
+          <p>Ibge: {{ endereco.ibge }}</p>
+          <p>Localidade: {{ endereco.localidade }}</p>
+          <p>Logradouro: {{ endereco.logradouro }}</p>
+          <p>UF: {{ endereco.uf }}</p>
+          <p>Unidade: {{ endereco.unidade }}</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
 </ion-content>
