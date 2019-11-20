@@ -1,14 +1,30 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Buscar Cep
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-item>
+    <ion-label>Cep</ion-label>
+    <ion-input type="text" name="cep" [(ngModel)]="cep"></ion-input>
+  </ion-item>
+
+  <button ion-button color="primary" (click)="getCep()">Cep</button>
+
+  <ion-item>
+    <div>
+      <p>Cep: {{ endereco.cep }}</p>
+      <p>Bairro: {{ endereco.bairro }}</p>
+      <p>Complemento: {{ endereco.complemento }}</p>
+      <p>Gia: {{ endereco.gia }}</p>
+      <p>Ibge: {{ endereco.ibge }}</p>
+      <p>Localidade: {{ endereco.localidade }}</p>
+      <p>Logradouro: {{ endereco.logradouro }}</p>
+      <p>UF: {{ endereco.uf }}</p>
+      <p>Unidade: {{ endereco.unidade }}</p>
+    </div>
+  </ion-item>
 </ion-content>
